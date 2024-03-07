@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { MdChevronLeft, MdMenu, MdNotifications } from "react-icons/md";
 import { muridListItems } from "./muridListItems";
 
@@ -74,7 +74,13 @@ const Drawer = styled(MuiDrawer, {
 //Theme
 const defaultTheme = createTheme();
 
-const SidebarUI = ({ children, titlePage }) => {
+const SidebarUI = ({
+  children,
+  titlePage,
+}: {
+  children: ReactNode;
+  titlePage: string;
+}) => {
   const [open, setOpen] = useState(true);
   const toggleDrawer = () => {
     setOpen(!open);

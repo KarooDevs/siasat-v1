@@ -152,8 +152,8 @@ const SidebarUI = ({
                     </Typography>
                   </Grid>
                   <Grid>
-                    <Typography variant="h6" color="initial">
-                      nama muridnya
+                    <Typography variant="h6" color="initial" fontWeight="bold">
+                      Beta Nurul Awalin
                     </Typography>
                   </Grid>
                 </Grid>
@@ -195,8 +195,6 @@ const SidebarUI = ({
 
             {muridListItems}
             <Divider sx={{ my: 1 }} />
-
-            {/* {secondaryListItems} */}
           </List>
         </Drawer>
         {/* Sidebar End */}
@@ -207,9 +205,7 @@ const SidebarUI = ({
           sx={{ flexGrow: 1, height: "100vh", overflow: "auto" }}
         >
           <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            {children}
-          </Container>
+          <Box sx={{ mt: 1, mb: 4, ml: "auto", mr: "auto" }}>{children}</Box>
         </Box>
         {/* Main End */}
       </Box>

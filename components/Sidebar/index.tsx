@@ -188,7 +188,7 @@ const SidebarUI = ({
             sx={{
               backgroundColor: "#2e2e2e",
               color: "white",
-              height: "100vh",
+              height: "100%",
             }}
           >
             {/* Sidebar content */}

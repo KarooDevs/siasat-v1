@@ -1,4 +1,5 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import CardDashboard from "@/components/Card/CardDashboard";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { MdBook } from "react-icons/md";
 
@@ -27,6 +28,7 @@ function page() {
             height: "40vh",
             position: "absolute",
             zIndex: -1,
+            transition: "transform 0.3s ease",
           }}
         ></div>
         <Typography variant="h3" component="div" sx={{ fontWeight: "bold" }}>
@@ -72,59 +74,46 @@ function page() {
             Dashboard SIASAT
           </Typography>
         </Box>
-        <Box
+        <Grid
+          container
+          spacing={1}
           sx={{
+            mt: 5,
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <Box
-            sx={{
-              px: 6,
-              py: 3,
-              backgroundColor: "#ffffff",
-              my: 3,
-              mx: 5,
-              borderRadius: 6,
-            }}
-          >
-            <MdBook size={48} />
-            <Typography variant="h6" color="initial">
-              Absensi
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              px: 6,
-              py: 3,
-              backgroundColor: "#ffffff",
-              my: 3,
-              mx: 5,
-              borderRadius: 6,
-            }}
-          >
-            <MdBook size={48} />
-            <Typography variant="h6" color="initial">
-              Mata Pelajaran
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              px: 6,
-              py: 3,
-              backgroundColor: "#ffffff",
-              my: 3,
-              mx: 5,
-              borderRadius: 6,
-            }}
-          >
-            <MdBook size={48} />
-            <Typography variant="h6" color="initial">
-              Jadwal Pelajaran
-            </Typography>
-          </Box>
-        </Box>
+          <CardDashboard
+            icon={<MdBook size={48} color="#297a94" />}
+            title="Absensi"
+            href={"/murid/absensi"}
+          />
+
+          <CardDashboard
+            icon={<MdBook size={48} color="#297a94" />}
+            title="Mata Pelajaran"
+            href={"/murid/mapel"}
+          />
+
+          <CardDashboard
+            icon={<MdBook size={48} color="#297a94" />}
+            title="Jadwal Pelajaran"
+            href={"/murid/jadwal"}
+          />
+
+          <CardDashboard
+            icon={<MdBook size={48} color="#297a94" />}
+            title="Nilai Siswa"
+            href={"/murid/nilai"}
+          />
+
+          <CardDashboard
+            icon={<MdBook size={48} color="#297a94" />}
+            title="Rapor Siswa"
+            href={"/murid/rapor"}
+          />
+        </Grid>
       </Box>
       {/* Dashboard End */}
     </>

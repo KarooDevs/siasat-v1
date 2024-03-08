@@ -74,7 +74,7 @@ export const muridListItems = (
       <ListItemText primary="Mapel" />
     </ListItemButton>
     {/* Rapor */}
-    <ListItemButton
+    {/* <ListItemButton
       href="/murid/rapor"
       sx={{
         ":hover": { backgroundColor: "#297a94" },
@@ -84,7 +84,7 @@ export const muridListItems = (
         <MdDashboard color="white" />
       </ListItemIcon>
       <ListItemText primary="Rapor" />
-    </ListItemButton>
+    </ListItemButton> */}
     {/* Absensi */}
     <ListItemButton
       href="/murid/absensi"

@@ -20,21 +20,57 @@ function page() {
         <Box sx={{ p: 3, flexGrow: 1, mt: 2 }}>
           <TableContainer>
             <Table sx={{ minWidth: 650 }}>
-              <TableHead sx={{ backgroundColor: "#2a7" }}>
+              <TableHead sx={{ backgroundColor: "#297a94" }}>
                 <TableRow>
-                  <TableCell>p</TableCell>
-                  <TableCell align="right">p</TableCell>
-                  <TableCell align="right">p</TableCell>
-                  <TableCell align="right">p</TableCell>
-                  <TableCell align="right">p</TableCell>
+                  <TableCell>No.</TableCell>
+                  <TableCell align="left">Senin</TableCell>
+                  <TableCell align="left">Selasa</TableCell>
+                  <TableCell align="left">Rabu</TableCell>
+                  <TableCell align="left">Kamis</TableCell>
+                  <TableCell align="left">Jumat</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                <TableCell>p</TableCell>
-                <TableCell align="right">p</TableCell>
-                <TableCell align="right">p</TableCell>
-                <TableCell align="right">p</TableCell>
-                <TableCell align="right">p</TableCell>
+                <TableRow>
+                  <TableCell>1.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>2.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>3.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>4.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>5.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left"></TableCell>
+                  <TableCell align="left"></TableCell>
+                </TableRow>
               </TableBody>
             </Table>
           </TableContainer>

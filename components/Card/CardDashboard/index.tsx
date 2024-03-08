@@ -1,7 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 
-const CardDashboard = ({ icon, title, href }) => {
+const CardDashboard = ({
+  icon,
+  title,
+  href,
+}: {
+  icon: ReactNode;
+  title: string;
+  href: string;
+}) => {
   return (
     <>
       <Link href={href} style={{ textDecoration: "none", color: "inherit" }}>

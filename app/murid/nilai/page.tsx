@@ -1,6 +1,16 @@
 import CardBiru from "@/components/Card/CardBiru";
 import CardPutih from "@/components/Card/CardPutih";
-import { Box, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 function page() {
@@ -71,7 +81,66 @@ function page() {
           </Grid>
         </Grid>
       </Box>
-      <CardPutih>nilai</CardPutih>
+      <CardPutih>
+        <Box sx={{ p: 3, flexGrow: 1, mt: 2 }}>
+          <TableContainer>
+            <Table sx={{ minWidth: 650 }}>
+              <TableHead sx={{ backgroundColor: "#297a94" }}>
+                <TableRow>
+                  <TableCell>No.</TableCell>
+                  <TableCell align="left">MAPEL</TableCell>
+                  <TableCell align="left">UH 1</TableCell>
+                  <TableCell align="left">Uh 2</TableCell>
+                  <TableCell align="left">UTS</TableCell>
+                  <TableCell align="left">UAS</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>1.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">30</TableCell>
+                  <TableCell align="left">40</TableCell>
+                  <TableCell align="left">50</TableCell>
+                  <TableCell align="left">60</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>2.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">30</TableCell>
+                  <TableCell align="left">40</TableCell>
+                  <TableCell align="left">50</TableCell>
+                  <TableCell align="left">60</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>3.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">30</TableCell>
+                  <TableCell align="left">40</TableCell>
+                  <TableCell align="left">50</TableCell>
+                  <TableCell align="left">60</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>4.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">30</TableCell>
+                  <TableCell align="left">40</TableCell>
+                  <TableCell align="left">50</TableCell>
+                  <TableCell align="left">60</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>5.</TableCell>
+                  <TableCell align="left">Mtk</TableCell>
+                  <TableCell align="left">30</TableCell>
+                  <TableCell align="left">40</TableCell>
+                  <TableCell align="left">50</TableCell>
+                  <TableCell align="left">60</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Box>
+      </CardPutih>
     </div>
   );
 }

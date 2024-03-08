@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
+import { ReactNode } from "react";
 
 const CardDashboard = ({
   icon,

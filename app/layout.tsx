@@ -29,13 +29,32 @@ export default function RootLayout({
   ];
 
   const [currentPath, setCurrentPath] = useState("");
+  // sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const path = window.location.pathname;
     setCurrentPath(path);
+
+    // cek sidebar open
+    const storedSidebarState = localStorage.getItem("isSidebarOpen");
+    if (storedSidebarState) {
+      setIsSidebarOpen(storedSidebarState === "true");
+    }
   }, []);
+
+  // Simpan status sidebar ke local storage saat berubah
+  useEffect(() => {
+    localStorage.setItem("isSidebarOpen", String(isSidebarOpen));
+    console.log(isSidebarOpen);
+  }, [isSidebarOpen]);
+
   // const currentPath = router.pathname;
   const currentLink = linkSidebar.find((link) => link.href === currentPath);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prevState) => !prevState);
+  };
 
   return (
     <html lang="en">
@@ -47,7 +66,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <SidebarUI titlePage={currentLink ? currentLink.name : ""}>
+        <SidebarUI
+          titlePage={currentLink ? currentLink.name : ""}
+          isOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
+        >
           {children}
         </SidebarUI>
       </body>

@@ -14,11 +14,17 @@ import {
   Grid,
   Paper,
   Link,
+  Button,
 } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import { ReactNode, useState } from "react";
-import { MdChevronLeft, MdMenu, MdNotifications } from "react-icons/md";
+import {
+  MdChevronLeft,
+  MdMenu,
+  MdNotifications,
+  MdPersonOutline,
+} from "react-icons/md";
 import { muridListItems } from "./muridListItems";
 
 const drawerWidth = 200;
@@ -77,31 +83,38 @@ const defaultTheme = createTheme();
 const SidebarUI = ({
   children,
   titlePage,
+  isOpen,
+  toggleSidebar,
 }: {
   children: ReactNode;
   titlePage: string;
+  isOpen: boolean;
+  toggleSidebar: () => void;
 }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(isOpen);
   const toggleDrawer = () => {
     setOpen(!open);
+    // isOpen = !open;
+    // toggleSidebar();
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
+        {/* Navbar */}
         <AppBar
           position="absolute"
-          open={open}
+          open={isOpen}
           sx={{ backgroundColor: "white", color: "black" }}
         >
           <Toolbar sx={{ pr: "24px" }}>
             <IconButton
               edge="start"
               color="inherit"
-              onClick={toggleDrawer}
+              onClick={toggleSidebar}
               aria-label="open drawer"
-              sx={{ marginRight: "36px", ...(open && { display: "none" }) }}
+              sx={{ marginRight: "36px", ...(isOpen && { display: "none" }) }}
             >
               <MdMenu />
             </IconButton>
@@ -114,16 +127,46 @@ const SidebarUI = ({
             >
               {titlePage}
             </Typography>
-            <IconButton color="inherit">
+            {/* <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MdNotifications />
               </Badge>
-            </IconButton>
+            </IconButton> */}
+            {/* <Button
+              variant="contained"
+              color="primary"
+              sx={{ ml: 1 }}
+              onClick={() => (window.location.href = "/login")}
+            >
+              Login
+            </Button> */}
+            <div style={{ marginLeft: 1 }}>
+              <Grid container spacing={2}>
+                <Grid item>
+                  <MdPersonOutline size={64} color="#297a94" />
+                </Grid>
+                <Grid item>
+                  <Grid>
+                    <Typography variant="subtitle1" color="initial">
+                      Murid,
+                    </Typography>
+                  </Grid>
+                  <Grid>
+                    <Typography variant="h6" color="initial">
+                      nama muridnya
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </div>
           </Toolbar>
         </AppBar>
+        {/* Navbar End */}
+
+        {/* Sidebar */}
         <Drawer
           variant="permanent"
-          open={open}
+          open={isOpen}
           sx={{ backgroundColor: "#2e2e2e", color: "white" }}
         >
           <Toolbar
@@ -136,25 +179,29 @@ const SidebarUI = ({
               color: "white",
             }}
           >
-            <IconButton onClick={toggleDrawer}>
+            <IconButton onClick={toggleSidebar}>
               <MdChevronLeft color="white" />
             </IconButton>
           </Toolbar>
           <List
             component="nav"
-            sx={{ backgroundColor: "#2e2e2e", color: "white", height: "100vh" }}
+            sx={{
+              backgroundColor: "#2e2e2e",
+              color: "white",
+              height: "100vh",
+            }}
           >
             {/* Sidebar content */}
-            {/* <Link href="/">Dashboard</Link>
-            <Link href="/murid/jadwal">Jadwal</Link>
-            <Link href="/murid/mapel">Mapel</Link>
-            <Link href="/murid/profile">Profile</Link> */}
+
             {muridListItems}
             <Divider sx={{ my: 1 }} />
 
             {/* {secondaryListItems} */}
           </List>
         </Drawer>
+        {/* Sidebar End */}
+
+        {/* Main */}
         <Box
           component="main"
           sx={{ flexGrow: 1, height: "100vh", overflow: "auto" }}
@@ -164,6 +211,7 @@ const SidebarUI = ({
             {children}
           </Container>
         </Box>
+        {/* Main End */}
       </Box>
     </ThemeProvider>
   );

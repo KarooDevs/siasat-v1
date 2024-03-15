@@ -32,7 +32,7 @@ const CardDashboard = ({
           }}
         >
           {icon}
-          <Typography variant="h6" color="initial">
+          <Typography variant="h6" color="black" fontWeight="bold">
             {title}
           </Typography>
         </Box>

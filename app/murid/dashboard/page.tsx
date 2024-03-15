@@ -1,7 +1,13 @@
 import CardDashboard from "@/components/Card/CardDashboard";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import { MdBook } from "react-icons/md";
+import {
+  MdBook,
+  MdCalendarMonth,
+  MdLibraryBooks,
+  MdMenuBook,
+  MdOutlineCalendarMonth,
+} from "react-icons/md";
 
 function page() {
   return (
@@ -85,7 +91,7 @@ function page() {
           }}
         >
           <CardDashboard
-            icon={<MdBook size={48} color="#297a94" />}
+            icon={<MdCalendarMonth size={48} color="#297a94" />}
             title="Absensi"
             href={"/murid/absensi"}
           />
@@ -97,19 +103,19 @@ function page() {
           />
 
           <CardDashboard
-            icon={<MdBook size={48} color="#297a94" />}
+            icon={<MdOutlineCalendarMonth size={48} color="#297a94" />}
             title="Jadwal Pelajaran"
             href={"/murid/jadwal"}
           />
 
           <CardDashboard
-            icon={<MdBook size={48} color="#297a94" />}
+            icon={<MdLibraryBooks size={48} color="#297a94" />}
             title="Nilai Siswa"
             href={"/murid/nilai"}
           />
 
           <CardDashboard
-            icon={<MdBook size={48} color="#297a94" />}
+            icon={<MdMenuBook size={48} color="#297a94" />}
             title="Rapor Siswa"
             href={"/murid/rapor"}
           />

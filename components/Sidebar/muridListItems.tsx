@@ -3,7 +3,15 @@
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useRouter } from "next/router";
 import * as React from "react";
-import { MdDashboard } from "react-icons/md";
+import {
+  MdAccountCircle,
+  MdBook,
+  MdCalendarMonth,
+  MdDashboard,
+  MdLibraryBooks,
+  MdMenuBook,
+  MdOutlineCalendarMonth,
+} from "react-icons/md";
 
 export const muridListItems = (
   // const router = useRouter();
@@ -57,7 +65,7 @@ export const muridListItems = (
       }}
     >
       <ListItemIcon>
-        <MdDashboard color="white" />
+        <MdAccountCircle color="white" />
       </ListItemIcon>
       <ListItemText primary="Profile" />
     </ListItemButton>
@@ -69,22 +77,22 @@ export const muridListItems = (
       }}
     >
       <ListItemIcon>
-        <MdDashboard color="white" />
+        <MdBook color="white" />
       </ListItemIcon>
       <ListItemText primary="Mapel" />
     </ListItemButton>
     {/* Rapor */}
-    {/* <ListItemButton
+    <ListItemButton
       href="/murid/rapor"
       sx={{
         ":hover": { backgroundColor: "#297a94" },
       }}
     >
       <ListItemIcon>
-        <MdDashboard color="white" />
+        <MdMenuBook color="white" />
       </ListItemIcon>
       <ListItemText primary="Rapor" />
-    </ListItemButton> */}
+    </ListItemButton>
     {/* Absensi */}
     <ListItemButton
       href="/murid/absensi"
@@ -93,7 +101,7 @@ export const muridListItems = (
       }}
     >
       <ListItemIcon>
-        <MdDashboard color="white" />
+        <MdCalendarMonth color="white" />
       </ListItemIcon>
       <ListItemText primary="Absensi" />
     </ListItemButton>
@@ -105,7 +113,7 @@ export const muridListItems = (
       }}
     >
       <ListItemIcon>
-        <MdDashboard color="white" />
+        <MdLibraryBooks color="white" />
       </ListItemIcon>
       <ListItemText primary="Nilai" />
     </ListItemButton>
@@ -117,7 +125,7 @@ export const muridListItems = (
       }}
     >
       <ListItemIcon>
-        <MdDashboard color="white" />
+        <MdOutlineCalendarMonth color="white" />
       </ListItemIcon>
       <ListItemText primary="Jadwal" />
     </ListItemButton>

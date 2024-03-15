@@ -18,43 +18,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const linkSidebar = [
-    { href: "/murid/dashboard", name: "Dashboard" },
-    { href: "/murid/profile", name: "Profile" },
-    { href: "/murid/mapel", name: "Mapel" },
-    { href: "/murid/rapor", name: "Rapor" },
-    { href: "/murid/absensi", name: "Absensi" },
-    { href: "/murid/jadwal", name: "Jadwal" },
-    { href: "/murid/nilai", name: "Nilai" },
-  ];
+  // const linkSidebar = [
+  //   { href: "/murid/dashboard", name: "Dashboard" },
+  //   { href: "/murid/profile", name: "Profile" },
+  //   { href: "/murid/mapel", name: "Mapel" },
+  //   { href: "/murid/rapor", name: "Rapor" },
+  //   { href: "/murid/absensi", name: "Absensi" },
+  //   { href: "/murid/jadwal", name: "Jadwal" },
+  //   { href: "/murid/nilai", name: "Nilai" },
+  // ];
 
-  const [currentPath, setCurrentPath] = useState("");
-  // sidebar
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [currentPath, setCurrentPath] = useState("");
+  // // sidebar
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-    setCurrentPath(path);
+  // useEffect(() => {
+  //   const path = window.location.pathname;
+  //   setCurrentPath(path);
 
-    // cek sidebar open
-    const storedSidebarState = localStorage.getItem("isSidebarOpen");
-    if (storedSidebarState) {
-      setIsSidebarOpen(storedSidebarState === "true");
-    }
-  }, []);
+  //   // cek sidebar open
+  //   const storedSidebarState = localStorage.getItem("isSidebarOpen");
+  //   if (storedSidebarState) {
+  //     setIsSidebarOpen(storedSidebarState === "true");
+  //   }
+  // }, []);
 
-  // Simpan status sidebar ke local storage saat berubah
-  useEffect(() => {
-    localStorage.setItem("isSidebarOpen", String(isSidebarOpen));
-    console.log(isSidebarOpen);
-  }, [isSidebarOpen]);
+  // // Simpan status sidebar ke local storage saat berubah
+  // useEffect(() => {
+  //   localStorage.setItem("isSidebarOpen", String(isSidebarOpen));
+  //   console.log(isSidebarOpen);
+  // }, [isSidebarOpen]);
 
-  // const currentPath = router.pathname;
-  const currentLink = linkSidebar.find((link) => link.href === currentPath);
+  // // const currentPath = router.pathname;
+  // const currentLink = linkSidebar.find((link) => link.href === currentPath);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen((prevState) => !prevState);
-  };
+  // const toggleSidebar = () => {
+  //   setIsSidebarOpen((prevState) => !prevState);
+  // };
 
   return (
     <html lang="en">
@@ -66,13 +66,14 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className} style={{ backgroundColor: "#d9d9d9" }}>
-        <SidebarUI
+        {/* <SidebarUI
           titlePage={currentLink ? currentLink.name : ""}
           isOpen={isSidebarOpen}
           toggleSidebar={toggleSidebar}
         >
           {children}
-        </SidebarUI>
+        </SidebarUI> */}
+        {children}
       </body>
     </html>
   );

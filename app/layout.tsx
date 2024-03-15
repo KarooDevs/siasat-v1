@@ -65,7 +65,7 @@ export default function RootLayout({
           content="Sistem Akademik Terpadu - Version 1"
         />
       </head>
-      <body className={inter.className} style={{ backgroundColor: "#d9d9d9" }}>
+      <body className={inter.className}>
         {/* <SidebarUI
           titlePage={currentLink ? currentLink.name : ""}
           isOpen={isSidebarOpen}

@@ -4,7 +4,7 @@ import "../globals.css";
 import SidebarUI from "@/components/Sidebar";
 import { useEffect, useState } from "react";
 
-export default function muridLayout({
+export default function MuridLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

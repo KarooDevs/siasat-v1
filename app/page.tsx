@@ -85,7 +85,7 @@ export default function Home() {
             <Button
               variant="contained"
               sx={{ paddingY: 1, paddingX: 2 }}
-              href="/murid/dashboard"
+              href="/login"
             >
               Login SIASAT
             </Button>
